@@ -1,0 +1,163 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#fde2ff,#f8edff,#fff5fb);
+overflow-x:hidden;
+color:#444;
+}
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#f8d8ff,#fdf0ff);
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#ffd8f0;
+border-radius:50%;
+top:-150px;
+left:-120px;
+filter:blur(120px);
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:#d9c2ff;
+border-radius:50%;
+bottom:-150px;
+right:-100px;
+filter:blur(120px);
+}
+
+.glass{
+width:90%;
+max-width:500px;
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(20px);
+border-radius:30px;
+padding:50px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+z-index:2;
+animation:fadeUp 1.3s ease;
+}
+
+.glass h3{
+font-size:18px;
+color:#a55eea;
+letter-spacing:2px;
+}
+
+.glass h1{
+font-family:'Great Vibes',cursive;
+font-size:70px;
+margin:20px 0;
+color:#ff4f93;
+}
+
+.glass p{
+font-size:18px;
+line-height:1.8;
+color:#666;
+}
+
+button{
+padding:15px 40px;
+border:none;
+border-radius:50px;
+background:#ff5fa2;
+color:#fff;
+font-size:17px;
+margin-top:30px;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+transform:translateY(-5px);
+background:#ff2d7a;
+box-shadow:0 15px 30px rgba(255,92,146,.4);
+}
+
+.hidden{
+opacity:0;
+transform:translateY(80px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+font-size:42px;
+margin-bottom:35px;
+color:#ff5c9d;
+font-family:'Great Vibes',cursive;
+}
+
+.letter p{
+max-width:800px;
+margin:auto;
+font-size:20px;
+line-height:2;
+background:#fff;
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+overflow:hidden;
+border-radius:25px;
+background:#fff;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card img{
+width:100%;
+height:350px;
+object-fit:cover;
+transition:.5s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
